@@ -1,11 +1,18 @@
 <template>
   <v-app>
-    <v-main>
-      <router-view />
-    </v-main>
+    <v-content>
+      <Navbar></Navbar>
+      <router-view></router-view>
+    </v-content>
   </v-app>
 </template>
 
-<script setup>
-  //
+<script>
+import Navbar from "@/components/Navbar.vue";
+import {defineComponent} from "vue";
+
+export default defineComponent({
+  components: {Navbar}
+})
+
 </script>
